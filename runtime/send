@@ -1,0 +1,47 @@
+source registers
+
+bus_type=
+
+# Did the user select "Update SMEM via SPI"?
+if [ "$1" == "0" ] || [ "$1" == "spi" ]; then
+    bus_type=0
+    shift
+fi
+# Did the user select "Update SMEM via HSI"?
+if [ "$1" == "1" ] || [ "$1" == "hsi" ]; then
+    bus_type=1
+    shift
+fi
+
+# Make sure the user gave us a bus-type
+if [ -z bus_type ]; then
+    echo "Must specify bus type spi or hsi"
+    exit 1
+fi
+
+# Does the user want to force all rows of SMEM/cache to be updated?
+force_smem=0
+if [ "$1" == "1" ] || [ "$1" == "force" ]; then
+    force_smem=1
+fi
+
+# Tell the RTL which bus-type to use
+axi $REG_SELECT_HSI $bus_type
+
+# Do we need to force an update of all SMEM rows?
+if [ $force_smem -eq 1 ]; then
+    axi $REG_FORCE_SMEM 0
+    axi $REG_FORCE_SMEM 1
+    axi $REG_FORCE_SMEM 0
+fi
+
+# Send the ABM packets
+axi $REG_SEND_ABM 1
+
+# How many SMEM rows and words were updated?
+while [ $(axi -dec $REG_SMEM_BUSY) -eq 1 ]; do
+    sleep .1
+done
+
+echo "SMEM rows  updated: $(axi -dec $REG_SMEM_ROWS_UPD )"
+echo "SMEM words updated: $(axi -dec $REG_SMEM_WORDS_UPD)"

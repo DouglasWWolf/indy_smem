@@ -1,0 +1,36 @@
+#----------------------------------
+# Registers from the SMEM/ABM BDC
+#----------------------------------
+BASE_ADDR=0x1000
+
+    REG_LOAD_VIA_PCI=$((BASE_ADDR + 4*  0))
+  REG_PCI_SRC_ADDR_H=$((BASE_ADDR + 4*  1))
+  REG_PCI_SRC_ADDR_L=$((BASE_ADDR + 4*  2))
+      REG_SELECT_HSI=$((BASE_ADDR + 4*  3))
+      REG_FORCE_SMEM=$((BASE_ADDR + 4*  4))
+     REG_CHIPIO_ADDR=$((BASE_ADDR + 4*  5))
+     REG_CHIPIO_DATA=$((BASE_ADDR + 4*  6))
+REG_CHIPIO_DATA_INCR=$((BASE_ADDR + 4*  7))
+            obsolete=$((BASE_ADDR + 4*  8))
+       REG_SMEM_BUSY=$((BASE_ADDR + 4*  9))
+   REG_SMEM_ROWS_UPD=$((BASE_ADDR + 4* 10))
+  REG_SMEM_WORDS_UPD=$((BASE_ADDR + 4* 11))
+       REG_ABM_COUNT=$((BASE_ADDR + 4* 12))
+
+      REG_HS_CLK_REF=$((0x7000 + 4* 16))
+      REG_HS_CLK_VCO=$((0x7000 + 4* 17))
+      REG_HS_CLK_DIV=$((0x7000 + 4* 18))
+     REG_HS_CLK_FREQ=$((0x7000 + 4* 19))
+
+
+#----------------------------------
+# Test/debug registers
+#----------------------------------
+BASE_ADDR=0x3000
+REG_SEND_ABM=$((BASE_ADDR + 4* 0))
+
+
+axi()
+{
+    pcireg $1 $2 $3 $4
+}

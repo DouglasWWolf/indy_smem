@@ -1,0 +1,51 @@
+#
+#  This script dumps the contents of SMEM
+#
+
+
+xpcireg()
+{
+    printf "%d\n" $1
+}
+
+
+dump_row()
+{
+    local bank=$1
+    local row=$2
+    local file=$3
+    local i=0
+
+    local chip_addr=$((0x8000 + bank*0x20000 + row*256))
+    while [ $i -lt 64 ]; do
+        printf "%08X " $(xpcireg $chip_addr) >>$file
+        chip_addr=$((chip_addr + 4))
+        i=$((i + 1))
+    done
+    echo >>$file
+
+}
+
+
+
+
+dump_abm_order()
+{
+    local row=0
+    local bank=0
+    local file=smem.hex
+    echo >$file
+
+    while [ $row -lt 512 ]; do
+        bank=0
+        printf "Dumping SMEM row %3d...\n" $row
+        while [ $bank -lt 8 ]; do
+            dump_row $bank $row $file
+            bank=$((bank + 1))
+        done
+        row=$((row + 1))
+    done
+}
+
+
+dump_abm_order

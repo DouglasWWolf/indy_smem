@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="43">
+  <CompositeFile CompositeFileTopName="top_level" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1773961597"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1773961597"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1773961597"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1773961597"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth/top_level.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim/top_level.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level.bmj" Type="BMJ">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level_bmstub.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/abm_and_smem" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd" BDFileset="abm_and_smem_inst_0" BDSourceFile="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="abm_and_smem" Type="Block Design" SubInstancePath="top_level_abm_and_smem_0">
+        <TopFile Name="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd"/>
+        <FileCollection>
+          <File Name="../../../../src/common/axi4_lite_slave.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/chip_spi/chip_spi_if.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_and_smem_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/abm_notifier.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/abm_mux.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/sdp_ram.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/sdp_ram_if.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/muxed_sdp_ram_if.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/common/data_mover.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/abm_loader.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/abm_manager/abm_manager_if.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/chip_spi/chip_spi.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/chip_spi/chip_spi_mux.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/smem_writer/fetch_abm.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/smem_writer/smem_writer_spi.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/smem_writer/smem_writer_hsi_s1.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/smem_writer/smem_writer_hsi_s2.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/smem_writer/smem_writer_hsi.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/common/strobe_cdc.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/chip_if_cdc.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/common/axi4_lite_master.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/clock_mgr/clock_mgr_freq_ctr.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/clock_mgr/clock_mgr.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/src/clock_mgr/clock_mgr_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

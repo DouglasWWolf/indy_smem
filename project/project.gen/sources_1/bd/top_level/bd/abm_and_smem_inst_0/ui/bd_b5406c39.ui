@@ -1,0 +1,94 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"0.586087",
+   "Default View_TopLeft":"-321,0",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXI_RAM0_ETH -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port S_AXI_RAM0_PCI -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD -left
+preplace port S_AXI_RAM1_ETH -pg 1 -lvl 0:w -x 0 -y 240 -defaultsOSRD
+preplace port S_AXI_RAM1_PCI -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD -left
+preplace port AXI_CLOCK_CTL -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port S_AXI_CTL -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_pin_spi_cs_n -pg 1 -lvl 6 -x 2000 -y 220 -defaultsOSRD
+preplace port port-id_pin_spi_miso -pg 1 -lvl 6 -x 2000 -y 300 -defaultsOSRD -right
+preplace port port-id_pin_spi_mosi -pg 1 -lvl 6 -x 2000 -y 240 -defaultsOSRD
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_sys_smem_wen -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_pin_hsi_cmd -pg 1 -lvl 6 -x 2000 -y 100 -defaultsOSRD
+preplace port port-id_pin_hsi_valid -pg 1 -lvl 6 -x 2000 -y 120 -defaultsOSRD
+preplace port port-id_pin_hsi_pclk -pg 1 -lvl 6 -x 2000 -y 80 -defaultsOSRD
+preplace port port-id_chip_spi_pclk -pg 1 -lvl 6 -x 2000 -y 260 -defaultsOSRD
+preplace portBus pin_hsi_data -pg 1 -lvl 6 -x 2000 -y 60 -defaultsOSRD
+preplace inst abm_and_smem_ctl -pg 1 -lvl 3 -x 1080 -y 180 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 22 21 30 27 23 25 26 24 28 29 20 33 35 34 36 37 38 31 32} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk left -pinY clk 100L -pinDir resetn left -pinY resetn 80L -pinDir load_abm_0 left -pinY load_abm_0 220L -pinDir load_abm_1 left -pinY load_abm_1 200L -pinDir load_abm_wstrobe left -pinY load_abm_wstrobe 120L -pinDir load_abm_idle_0 left -pinY load_abm_idle_0 160L -pinDir load_abm_idle_1 left -pinY load_abm_idle_1 180L -pinBusDir abm_host_addr left -pinBusY abm_host_addr 140L -pinDir select_hsi right -pinY select_hsi 20R -pinDir force_smem_update right -pinY force_smem_update 40R -pinDir abm_ready_stb left -pinY abm_ready_stb 60L -pinDir smem_writer_busy right -pinY smem_writer_busy 100R -pinBusDir spi_start_stb right -pinBusY spi_start_stb 170R -pinBusDir spi_addr right -pinBusY spi_addr 150R -pinBusDir spi_wdata right -pinBusY spi_wdata 230R -pinBusDir spi_rdata right -pinBusY spi_rdata 250R -pinDir spi_busy right -pinY spi_busy 270R -pinBusDir smem_rows_updated right -pinBusY smem_rows_updated 60R -pinBusDir smem_words_updated right -pinBusY smem_words_updated 80R
+preplace inst abm_manager -pg 1 -lvl 1 -x 210 -y 180 -swap {108 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 144 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 36 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 0 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 181 180 185 187 186 184 183 188 182} -defaultsOSRD -pinDir S_AXI_RAM1_ETH left -pinY S_AXI_RAM1_ETH 60L -pinDir S_AXI_RAM0_ETH left -pinY S_AXI_RAM0_ETH 80L -pinDir S_AXI_ABM right -pinY S_AXI_ABM 20R -pinDir S_AXI_RAM1_PCI left -pinY S_AXI_RAM1_PCI 40L -pinDir S_AXI_RAM0_PCI left -pinY S_AXI_RAM0_PCI 20L -pinDir clk left -pinY clk 120L -pinDir resetn left -pinY resetn 100L -pinDir load_wstrobe right -pinY load_wstrobe 160R -pinDir load_1 right -pinY load_1 200R -pinDir load_0 right -pinY load_0 180R -pinDir idle_1 right -pinY idle_1 140R -pinDir idle_0 right -pinY idle_0 120R -pinBusDir pci_src_addr right -pinBusY pci_src_addr 220R -pinDir abm_ready right -pinY abm_ready 100R
+preplace inst chip_spi_mux -pg 1 -lvl 5 -x 1850 -y 200 -swap {6 7 4 0 8 1 12 13 3 10 9 15 5 2 14 11} -defaultsOSRD -pinDir clk left -pinY clk 170L -pinDir resetn left -pinY resetn 190L -pinBusDir addr_0 left -pinBusY addr_0 130L -pinBusDir addr_1 left -pinBusY addr_1 20L -pinBusDir wdata_0 left -pinBusY wdata_0 210L -pinBusDir wdata_1 left -pinBusY wdata_1 40L -pinBusDir rdata_0 left -pinBusY rdata_0 230L -pinDir busy_0 left -pinY busy_0 250L -pinDir busy_1 left -pinY busy_1 80L -pinDir spi_mosi right -pinY spi_mosi 40R -pinDir spi_cs_n right -pinY spi_cs_n 20R -pinDir spi_miso right -pinY spi_miso 100R -pinBusDir start_stb_0 left -pinBusY start_stb_0 150L -pinBusDir start_stb_1 left -pinBusY start_stb_1 60L -pinDir free_pclk right -pinY free_pclk 80R -pinDir spi_pclk right -pinY spi_pclk 60R
+preplace inst smem_writer -pg 1 -lvl 4 -x 1520 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 41 42 47 51 52 53 54 48 49 50 40 44 43 45 46} -defaultsOSRD -pinDir M_ABM left -pinY M_ABM 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir start_stb left -pinY start_stb 100L -pinDir select_hsi left -pinY select_hsi 160L -pinDir force_smem_update left -pinY force_smem_update 180L -pinBusDir spi_addr right -pinBusY spi_addr 180R -pinBusDir spi_wdata right -pinBusY spi_wdata 200R -pinBusDir spi_start right -pinBusY spi_start 220R -pinDir spi_busy right -pinY spi_busy 240R -pinBusDir smem_rows_updated left -pinBusY smem_rows_updated 200L -pinBusDir smem_words_updated left -pinBusY smem_words_updated 220L -pinDir busy left -pinY busy 240L -pinDir smem_wen left -pinY smem_wen 80L -pinDir chip_hsi_pclk right -pinY chip_hsi_pclk 40R -pinBusDir chip_hsi_data right -pinBusY chip_hsi_data 20R -pinDir chip_hsi_cmd right -pinY chip_hsi_cmd 60R -pinDir chip_hsi_valid right -pinY chip_hsi_valid 80R
+preplace inst chipif_cdc -pg 1 -lvl 2 -x 610 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 114 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 38 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 136 135 137 134 144 153 152 141 142 145 139 138 146 147 148 149 150 151 143 140} -defaultsOSRD -pinDir AXI_ABM right -pinY AXI_ABM 20R -pinDir SYS_AXI_ABM left -pinY SYS_AXI_ABM 160L -pinDir SYS_AXI_CTL left -pinY SYS_AXI_CTL 40L -pinDir AXI_CTL right -pinY AXI_CTL 160R -pinDir AXI_CLOCK_CTL left -pinY AXI_CLOCK_CTL 20L -pinDir sys_clk left -pinY sys_clk 220L -pinDir sys_resetn left -pinY sys_resetn 200L -pinDir sys_update_smem_stb left -pinY sys_update_smem_stb 240L -pinDir sys_smem_wen left -pinY sys_smem_wen 180L -pinDir load_abm_stb right -pinY load_abm_stb 260R -pinDir load_abm_0 right -pinY load_abm_0 360R -pinDir load_abm_1 right -pinY load_abm_1 340R -pinDir sys_load_abm_idle_0 left -pinY sys_load_abm_idle_0 260L -pinDir sys_load_abm_idle_1 left -pinY sys_load_abm_idle_1 280L -pinBusDir abm_host_addr right -pinBusY abm_host_addr 280R -pinDir update_smem_stb right -pinY update_smem_stb 200R -pinDir smem_wen right -pinY smem_wen 180R -pinDir sys_load_abm_stb left -pinY sys_load_abm_stb 300L -pinDir sys_load_abm_0 left -pinY sys_load_abm_0 320L -pinDir sys_load_abm_1 left -pinY sys_load_abm_1 340L -pinDir load_abm_idle_0 right -pinY load_abm_idle_0 300R -pinDir load_abm_idle_1 right -pinY load_abm_idle_1 320R -pinBusDir sys_abm_host_addr left -pinBusY sys_abm_host_addr 360L -pinDir chipif_clk right -pinY chipif_clk 240R -pinDir chipif_resetn right -pinY chipif_resetn 220R
+preplace netloc abm_and_smem_ctl_abm_host_addr 1 2 1 NJ 320
+preplace netloc abm_and_smem_ctl_spi_addr 1 3 2 NJ 330 NJ
+preplace netloc abm_and_smem_ctl_spi_start_stb 1 3 2 NJ 350 NJ
+preplace netloc abm_and_smem_ctl_spi_wdata 1 3 2 NJ 410 NJ
+preplace netloc chip_spi_busy_0 1 3 2 NJ 450 NJ
+preplace netloc chip_spi_mux_spi_cs_n 1 5 1 N 220
+preplace netloc chip_spi_mux_spi_mosi 1 5 1 N 240
+preplace netloc chip_spi_mux_spi_pclk 1 5 1 N 260
+preplace netloc chip_spi_rdata_0 1 3 2 NJ 430 NJ
+preplace netloc chipif_cdc_load_abm_idle_0 1 2 1 N 340
+preplace netloc chipif_cdc_load_abm_idle_1 1 2 1 N 360
+preplace netloc chipif_cdc_smem_wen 1 2 2 800 120 NJ
+preplace netloc chipif_cdc_sys_abm_host_addr 1 1 1 NJ 400
+preplace netloc chipif_cdc_sys_load_abm_0 1 1 1 NJ 360
+preplace netloc chipif_cdc_sys_load_abm_1 1 1 1 NJ 380
+preplace netloc chipif_cdc_sys_load_abm_stb 1 1 1 NJ 340
+preplace netloc chipif_cdc_update_smem_stb 1 2 2 860 140 NJ
+preplace netloc chipif_clock_chipif_clk 1 2 3 820 80 1320 370 N
+preplace netloc clock_manager_chipif_resetn 1 2 3 840 100 1300 390 NJ
+preplace netloc ext_spi_miso_1 1 5 1 N 300
+preplace netloc force_smem_update_1 1 3 1 N 220
+preplace netloc load_abm_0_1 1 2 1 NJ 400
+preplace netloc load_abm_1_1 1 2 1 NJ 380
+preplace netloc load_abm_stb_1 1 2 1 NJ 300
+preplace netloc pcie_bridge_0_axi_aclk 1 0 2 20 140 380
+preplace netloc pcie_bridge_0_axi_aresetn 1 0 2 40 120 400
+preplace netloc select_hsi_1 1 3 1 N 200
+preplace netloc smem_writer_busy 1 3 1 NJ 280
+preplace netloc smem_writer_chip_hsi_cmd 1 4 2 NJ 100 NJ
+preplace netloc smem_writer_chip_hsi_data 1 4 2 NJ 60 NJ
+preplace netloc smem_writer_chip_hsi_pclk 1 4 2 NJ 80 NJ
+preplace netloc smem_writer_chip_hsi_valid 1 4 2 NJ 120 NJ
+preplace netloc smem_writer_smem_rows_updated 1 3 1 NJ 240
+preplace netloc smem_writer_smem_words_updated 1 3 1 NJ 260
+preplace netloc smem_writer_spi_addr 1 4 1 N 220
+preplace netloc smem_writer_spi_start 1 4 1 N 260
+preplace netloc smem_writer_spi_wdata 1 4 1 N 240
+preplace netloc spi_busy_1 1 4 1 N 280
+preplace netloc sys_load_abm_idle_0_1 1 1 1 N 300
+preplace netloc sys_load_abm_idle_1_1 1 1 1 N 320
+preplace netloc sys_smem_wen_1 1 0 2 NJ 100 420
+preplace netloc sys_update_smem_stb_1 1 1 1 N 280
+preplace netloc AXI_ABM_1 1 2 2 NJ 60 NJ
+preplace netloc AXI_CLOCK_CTL_1 1 0 2 NJ 60 N
+preplace netloc S_AXI_ABM_1 1 1 1 N 200
+preplace netloc S_AXI_CTL_1 1 0 2 NJ 80 N
+preplace netloc S_AXI_RAM0_ETH_1 1 0 1 N 260
+preplace netloc S_AXI_RAM1_ETH_1 1 0 1 N 240
+preplace netloc chipif_cdc_AXI_CTL 1 2 1 N 200
+preplace netloc smem_manager_S_AXI_RAM0_PCI 1 0 1 N 200
+preplace netloc smem_manager_S_AXI_RAM1_PCI 1 0 1 N 220
+levelinfo -pg 1 0 210 610 1080 1520 1850 2000
+pagesize -pg 1 -db -bbox -sgen -180 0 2190 510
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"772,-216",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+levelinfo -pg 1 0 10
+pagesize -pg 1 -db -bbox -sgen 0 0 10 10
+"
+}
+0

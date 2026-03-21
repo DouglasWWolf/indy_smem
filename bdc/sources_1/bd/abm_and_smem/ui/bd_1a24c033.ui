@@ -1,0 +1,72 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-287,-138",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_hsi_cmd -pg 1 -lvl 2 -x 400 -y 140 -defaultsOSRD
+preplace port port-id_hsi_valid -pg 1 -lvl 2 -x 400 -y 160 -defaultsOSRD
+preplace port port-id_hsi_clk -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_i_start -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_ready -pg 1 -lvl 2 -x 400 -y 100 -defaultsOSRD
+preplace port port-id_done -pg 1 -lvl 2 -x 400 -y 80 -defaultsOSRD
+preplace port port-id_smem_write_stb -pg 1 -lvl 2 -x 400 -y 60 -defaultsOSRD
+preplace port port-id_async_enable -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus hsi_data -pg 1 -lvl 2 -x 400 -y 120 -defaultsOSRD
+preplace portBus i_chunk_index -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus i_smem_data -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace inst smem_writer_hsi_0 -pg 1 -lvl 1 -x 200 -y 40 -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinBusDir i_smem_data left -pinBusY i_smem_data 60L -pinBusDir i_chunk_index left -pinBusY i_chunk_index 80L -pinDir i_start left -pinY i_start 100L -pinDir smem_write_stb right -pinY smem_write_stb 20R -pinDir done right -pinY done 40R -pinDir ready right -pinY ready 60R -pinDir hsi_clk left -pinY hsi_clk 120L -pinBusDir hsi_data right -pinBusY hsi_data 80R -pinDir hsi_cmd right -pinY hsi_cmd 100R -pinDir hsi_valid right -pinY hsi_valid 120R -pinDir async_enable left -pinY async_enable 140L
+preplace netloc clk_1 1 0 1 NJ 60
+preplace netloc resetn_1 1 0 1 NJ 80
+preplace netloc i_smem_data_1 1 0 1 NJ 100
+preplace netloc i_chunk_index_1 1 0 1 NJ 120
+preplace netloc i_start_1 1 0 1 NJ 140
+preplace netloc hsi_clk_1 1 0 1 NJ 160
+preplace netloc async_enable_1 1 0 1 NJ 180
+preplace netloc smem_writer_hsi_0_smem_write_stb 1 1 1 NJ 60
+preplace netloc smem_writer_hsi_0_done 1 1 1 NJ 80
+preplace netloc smem_writer_hsi_0_ready 1 1 1 NJ 100
+preplace netloc smem_writer_hsi_0_hsi_data 1 1 1 NJ 120
+preplace netloc smem_writer_hsi_0_hsi_cmd 1 1 1 NJ 140
+preplace netloc smem_writer_hsi_0_hsi_valid 1 1 1 NJ 160
+levelinfo -pg 1 0 200 400
+pagesize -pg 1 -db -bbox -sgen -210 0 570 240
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-617,-160",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_hsi_cmd -pg 1 -lvl 4 -x 970 -y 170 -defaultsOSRD
+preplace port port-id_hsi_valid -pg 1 -lvl 4 -x 970 -y 190 -defaultsOSRD
+preplace port port-id_hsi_clk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_i_start -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus hsi_data -pg 1 -lvl 4 -x 970 -y 150 -defaultsOSRD
+preplace portBus i_chunk_index -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus i_smem_data -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace inst smem_writer_hsi_s2 -pg 1 -lvl 3 -x 800 -y 180 -defaultsOSRD
+preplace inst smem_writer_hsi_s1 -pg 1 -lvl 1 -x 210 -y 150 -defaultsOSRD
+preplace inst axis_stream_fifo -pg 1 -lvl 2 -x 530 -y 150 -defaultsOSRD
+preplace netloc smem_writer_hsi_s2_hsi_data 1 3 1 NJ 150
+preplace netloc smem_writer_hsi_s2_hsi_cmd 1 3 1 NJ 170
+preplace netloc smem_writer_hsi_s2_hsi_valid 1 3 1 NJ 190
+preplace netloc hsi_clk_1 1 0 3 NJ 20 410 60 650
+preplace netloc clk_1 1 0 2 20 30 400
+preplace netloc resetn_1 1 0 3 30 40 390 240 650J
+preplace netloc i_chunk_index_1 1 0 1 NJ 140
+preplace netloc i_smem_data_1 1 0 1 NJ 160
+preplace netloc i_start_1 1 0 1 NJ 180
+preplace netloc smem_writer_hsi_s2_fifo_empty 1 0 4 30 270 NJ 270 NJ 270 950
+preplace netloc axis_stream_fifo_M_AXIS 1 2 1 N 150
+preplace netloc smem_writer_hsi_s1_axis_out 1 1 1 N 120
+levelinfo -pg 1 0 210 530 800 970
+pagesize -pg 1 -db -bbox -sgen -210 0 1130 280
+"
+}
+0

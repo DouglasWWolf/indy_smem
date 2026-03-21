@@ -1,0 +1,1040 @@
+{
+    "graphjs": {
+        "version": "1.0",
+        "keys": [
+            {
+                "abrv": "VH",
+                "name": "vert_hid",
+                "type": "int",
+                "for": "node"
+            },
+            {
+                "abrv": "VM",
+                "name": "vert_name",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "VT",
+                "name": "vert_type",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "BA",
+                "name": "base_addr",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "HA",
+                "name": "high_addr",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "BP",
+                "name": "base_param",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "HP",
+                "name": "high_param",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MA",
+                "name": "master_addrspace",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MX",
+                "name": "master_instance",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MI",
+                "name": "master_interface",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MS",
+                "name": "master_segment",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MV",
+                "name": "master_vlnv",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "SX",
+                "name": "slave_instance",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "SI",
+                "name": "slave_interface",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "MM",
+                "name": "slave_memmap",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "SS",
+                "name": "slave_segment",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "SV",
+                "name": "slave_vlnv",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "TM",
+                "name": "memory_type",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "TU",
+                "name": "usage_type",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "LT",
+                "name": "lock_type",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "BT",
+                "name": "boot_type",
+                "type": "string",
+                "for": "node"
+            },
+            {
+                "abrv": "EH",
+                "name": "edge_hid",
+                "type": "int",
+                "for": "edge"
+            }
+        ],
+        "vertice_type_order": [
+            {
+                "abrv": "BC",
+                "desc": "Block Container"
+            },
+            {
+                "abrv": "PR",
+                "desc": "Parital Reference"
+            },
+            {
+                "abrv": "VR",
+                "desc": "Variant"
+            },
+            {
+                "abrv": "PM",
+                "desc": "Variant Permutations"
+            },
+            {
+                "abrv": "CX",
+                "desc": "Boundary Connection"
+            },
+            {
+                "abrv": "AC",
+                "desc": "Assignment Coordinate"
+            },
+            {
+                "abrv": "ACE",
+                "desc": "Excluded Assign Coordinate"
+            },
+            {
+                "abrv": "APX",
+                "desc": "Boundary Aperture"
+            },
+            {
+                "abrv": "CIP",
+                "desc": "High level Processing System"
+            }
+        ],
+        "vertices": {
+            "V0": {
+                "VM": "/abm_and_smem",
+                "VT": "BC"
+            },
+            "V1": {
+                "VM": "top_level",
+                "VT": "BC"
+            },
+            "V2": {
+                "VH": "2",
+                "VM": "top_level",
+                "VT": "VR"
+            },
+            "V3": {
+                "VH": "3",
+                "VM": "abm_and_smem_inst_0",
+                "VT": "VR"
+            },
+            "V4": {
+                "VH": "5",
+                "VM": "abm_and_smem",
+                "VT": "VR"
+            },
+            "V5": {
+                "VH": "6",
+                "VT": "PM",
+                "TU": "active"
+            },
+            "V6": {
+                "VH": "10",
+                "VT": "PM"
+            },
+            "V7": {
+                "VT": "CX",
+                "BP": "axibar_0",
+                "HP": "axibar_highaddr_0",
+                "MX": "/abm_and_smem",
+                "MI": "S_AXI_RAM0_PCI",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_B",
+                "SS": "BAR0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V8": {
+                "VT": "CX",
+                "BP": "axibar_0",
+                "HP": "axibar_highaddr_0",
+                "MX": "/abm_and_smem",
+                "MI": "S_AXI_RAM1_PCI",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_B",
+                "SS": "BAR0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V9": {
+                "VT": "CX",
+                "MA": "M_AXI",
+                "MX": "/channel_0/rdmx_recv",
+                "MI": "M_AXI",
+                "MV": "xilinx.com:module_ref:rdmx_recv:1.0",
+                "SX": "/abm_and_smem",
+                "SI": "S_AXI_RAM0_ETH"
+            },
+            "V10": {
+                "VT": "CX",
+                "MA": "M_AXI",
+                "MX": "/channel_1/rdmx_recv",
+                "MI": "M_AXI",
+                "MV": "xilinx.com:module_ref:rdmx_recv:1.0",
+                "SX": "/abm_and_smem",
+                "SI": "S_AXI_RAM1_ETH"
+            },
+            "V11": {
+                "VT": "CX",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/abm_and_smem",
+                "SI": "AXI_CLOCK_CTL"
+            },
+            "V12": {
+                "VT": "CX",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/abm_and_smem",
+                "SI": "S_AXI_CTL"
+            },
+            "V13": {
+                "VT": "AC",
+                "BA": "0x000",
+                "HA": "0xFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/abm_and_smem/chipif_cdc/clock_manager/clock_mgr",
+                "MI": "M_AXI",
+                "MS": "SEG_chipif_clock_Reg",
+                "MV": "xilinx.com:module_ref:clock_mgr:1.0",
+                "SX": "/abm_and_smem/chipif_cdc/clock_manager/chipif_clock",
+                "SI": "s_axi_lite",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:clk_wiz:6.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V14": {
+                "VT": "AC",
+                "BA": "0x000",
+                "HA": "0xFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/abm_and_smem/smem_writer/clock_manager",
+                "MI": "M_AXI",
+                "MS": "SEG_hs_clock_Reg",
+                "MV": "xilinx.com:module_ref:clock_mgr:1.0",
+                "SX": "/abm_and_smem/smem_writer/hs_clock",
+                "SI": "s_axi_lite",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:clk_wiz:6.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V15": {
+                "VT": "AC",
+                "BA": "0x0000",
+                "HA": "0x0FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_clock_mgr_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/abm_and_smem/chipif_cdc/clock_manager/clock_mgr_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:clock_mgr_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V16": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "ABM_AXI",
+                "MX": "/abm_and_smem/abm_manager/abm_loader_0",
+                "MI": "ABM_AXI",
+                "MS": "SEG_muxed_sdp_ram_if_0_reg0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/abm_and_smem/abm_manager/muxed_sdp_ram_if_0",
+                "SI": "S1_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:muxed_sdp_ram_if:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V17": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "ABM_AXI",
+                "MX": "/abm_and_smem/abm_manager/abm_loader_1",
+                "MI": "ABM_AXI",
+                "MS": "SEG_muxed_sdp_ram_if_1_reg0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/abm_and_smem/abm_manager/muxed_sdp_ram_if_1",
+                "SI": "S1_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:muxed_sdp_ram_if:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V18": {
+                "VT": "AC",
+                "BA": "0x00000",
+                "HA": "0xFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_ABM",
+                "MX": "/abm_and_smem/smem_writer/fetch_abm",
+                "MI": "M_ABM",
+                "MS": "SEG_abm_manager_if_reg0",
+                "MV": "xilinx.com:module_ref:fetch_abm:1.0",
+                "SX": "/abm_and_smem/abm_manager/abm_manager_if",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:abm_manager_if:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V19": {
+                "VT": "AC",
+                "BA": "0x00000",
+                "HA": "0xFFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "M_SMC",
+                "MX": "/abm_and_smem/smem_writer/fetch_abm",
+                "MI": "M_SMC",
+                "MS": "SEG_smem_cache_ctl_Mem0",
+                "MV": "xilinx.com:module_ref:fetch_abm:1.0",
+                "SX": "/abm_and_smem/smem_writer/cache/smem_cache_ctl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V20": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/channel_0/rdmx_recv",
+                "MI": "M_AXI",
+                "MS": "SEG_muxed_sdp_ram_if_0_reg0",
+                "MV": "xilinx.com:module_ref:rdmx_recv:1.0",
+                "SX": "/abm_and_smem/abm_manager/muxed_sdp_ram_if_0",
+                "SI": "S0_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:muxed_sdp_ram_if:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V21": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/channel_1/rdmx_recv",
+                "MI": "M_AXI",
+                "MS": "SEG_muxed_sdp_ram_if_1_reg0",
+                "MV": "xilinx.com:module_ref:rdmx_recv:1.0",
+                "SX": "/abm_and_smem/abm_manager/muxed_sdp_ram_if_1",
+                "SI": "S0_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:muxed_sdp_ram_if:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V22": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "ABM_AXI",
+                "MX": "/packet_generator/load_from_host_ram/abm_loader",
+                "MI": "ABM_AXI",
+                "MS": "SEG_axi_bram_ctrl_Mem0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/packet_generator/BRAM/axi_bram_ctrl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V23": {
+                "VT": "AC",
+                "BA": "0x00000",
+                "HA": "0xFFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/packet_generator/poke/initial_fill",
+                "MI": "M_AXI",
+                "MS": "SEG_axi_bram_ctrl_Mem0",
+                "MV": "xilinx.com:module_ref:fill:1.0",
+                "SX": "/packet_generator/BRAM/axi_bram_ctrl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V24": {
+                "VT": "AC",
+                "BA": "0x00000",
+                "HA": "0xFFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/packet_generator/poke/poke",
+                "MI": "M_AXI",
+                "MS": "SEG_axi_bram_ctrl_Mem0",
+                "MV": "xilinx.com:module_ref:poke:1.0",
+                "SX": "/packet_generator/BRAM/axi_bram_ctrl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V25": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "DST_AXI",
+                "MX": "/packet_generator/transmit/abm_sender_0",
+                "MI": "DST_AXI",
+                "MS": "SEG_rdmx_xmit_0_reg0",
+                "MV": "xilinx.com:module_ref:abm_sender:1.0",
+                "SX": "/packet_generator/transmit/rdmx_xmit_0",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:rdmx_xmit:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V26": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "SRC_AXI",
+                "MX": "/packet_generator/transmit/abm_sender_0",
+                "MI": "SRC_AXI",
+                "MS": "SEG_axi_bram_ctrl_Mem0",
+                "MV": "xilinx.com:module_ref:abm_sender:1.0",
+                "SX": "/packet_generator/BRAM/axi_bram_ctrl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V27": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "DST_AXI",
+                "MX": "/packet_generator/transmit/abm_sender_1",
+                "MI": "DST_AXI",
+                "MS": "SEG_rdmx_xmit_1_reg0",
+                "MV": "xilinx.com:module_ref:abm_sender:1.0",
+                "SX": "/packet_generator/transmit/rdmx_xmit_1",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:rdmx_xmit:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V28": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x00000000000FFFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "SRC_AXI",
+                "MX": "/packet_generator/transmit/abm_sender_1",
+                "MI": "SRC_AXI",
+                "MS": "SEG_axi_bram_ctrl_Mem0",
+                "MV": "xilinx.com:module_ref:abm_sender:1.0",
+                "SX": "/packet_generator/BRAM/axi_bram_ctrl",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V29": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "baseaddr",
+                "HP": "highaddr",
+                "MA": "M_AXI",
+                "MX": "/pcie_bridge/axi4_lite_plug",
+                "MI": "M_AXI",
+                "MS": "SEG_pcie_bridge_0_CTL0",
+                "MV": "xilinx.com:module_ref:axi4_lite_plug:1.0",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_LITE",
+                "SS": "CTL0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V30": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0xFFFFFFFFFFFFFFFF",
+                "BP": "axibar_0",
+                "HP": "axibar_highaddr_0",
+                "MA": "PCI_AXI",
+                "MX": "/abm_and_smem/abm_manager/abm_loader_0",
+                "MI": "PCI_AXI",
+                "MS": "SEG_pcie_bridge_0_BAR0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_B",
+                "SS": "BAR0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V31": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0xFFFFFFFFFFFFFFFF",
+                "BP": "axibar_0",
+                "HP": "axibar_highaddr_0",
+                "MA": "PCI_AXI",
+                "MX": "/abm_and_smem/abm_manager/abm_loader_1",
+                "MI": "PCI_AXI",
+                "MS": "SEG_pcie_bridge_0_BAR0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_B",
+                "SS": "BAR0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V32": {
+                "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0xFFFFFFFFFFFFFFFF",
+                "BP": "axibar_0",
+                "HP": "axibar_highaddr_0",
+                "MA": "PCI_AXI",
+                "MX": "/packet_generator/load_from_host_ram/abm_loader",
+                "MI": "PCI_AXI",
+                "MS": "SEG_pcie_bridge_0_BAR0",
+                "MV": "xilinx.com:module_ref:abm_loader:1.0",
+                "SX": "/pcie_bridge/pcie_bridge_0",
+                "SI": "S_AXI_B",
+                "SS": "BAR0",
+                "SV": "xilinx.com:ip:xdma:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V33": {
+                "VT": "AC",
+                "BA": "0x0000000000001000",
+                "HA": "0x00000000000010FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_abm_and_smem_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/abm_and_smem/abm_and_smem_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:abm_and_smem_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V34": {
+                "VT": "AC",
+                "BA": "0x0000000000002000",
+                "HA": "0x00000000000020FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_poke_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/packet_generator/poke/poke_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:poke_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V35": {
+                "VT": "AC",
+                "BA": "0x0000000000003000",
+                "HA": "0x00000000000030FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_abm_send_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/packet_generator/transmit/abm_send_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:abm_send_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V36": {
+                "VT": "AC",
+                "BA": "0x0000000000004000",
+                "HA": "0x00000000000040FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_indy_power_ctl_0_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/chip_power/indy_power_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:indy_power_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V37": {
+                "VT": "AC",
+                "BA": "0x0000000000005000",
+                "HA": "0x00000000000050FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_axi_adc_bank_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/adc_bank/axi_adc_bank",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:axi_adc_bank:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V38": {
+                "VT": "AC",
+                "BA": "0x0000000000006000",
+                "HA": "0x00000000000060FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_test_abm_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/packet_generator/load_from_host_ram/test_abm_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:test_abm_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V39": {
+                "VT": "AC",
+                "BA": "0x0000000000007000",
+                "HA": "0x00000000000070FF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI_B",
+                "MX": "/pcie_bridge/pcie_bridge_0",
+                "MI": "M_AXI_B",
+                "MS": "SEG_clock_mgr_ctl_reg0",
+                "MV": "xilinx.com:ip:xdma:4.1",
+                "SX": "/abm_and_smem/chipif_cdc/clock_manager/clock_mgr_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:clock_mgr_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            }
+        },
+        "edges": [
+            {
+                "src": "V0",
+                "trg": "V3"
+            },
+            {
+                "src": "V0",
+                "trg": "V4"
+            },
+            {
+                "src": "V0",
+                "trg": "V7"
+            },
+            {
+                "src": "V0",
+                "trg": "V8"
+            },
+            {
+                "src": "V0",
+                "trg": "V9"
+            },
+            {
+                "src": "V0",
+                "trg": "V10"
+            },
+            {
+                "src": "V0",
+                "trg": "V11"
+            },
+            {
+                "src": "V0",
+                "trg": "V12"
+            },
+            {
+                "src": "V1",
+                "trg": "V2"
+            },
+            {
+                "src": "V2",
+                "trg": "V5"
+            },
+            {
+                "src": "V2",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V3",
+                "trg": "V5"
+            },
+            {
+                "src": "V4",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V13",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V13",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V16",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V16",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V17",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V17",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V18",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V18",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V19",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V19",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V20",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V20",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V21",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V21",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V22",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V23",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V23",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V24",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V24",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V25",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V25",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V26",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V26",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V27",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V27",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V28",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V28",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V29",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V29",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V30",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V30",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V31",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V31",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V32",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V33",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V33",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V34",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V34",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V35",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V35",
+                "trg": "V6",
+                "EH": "10"
+            },
+            {
+                "src": "V36",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V37",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V38",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V39",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V39",
+                "trg": "V6",
+                "EH": "10"
+            }
+        ]
+    }
+}

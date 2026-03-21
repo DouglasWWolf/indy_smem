@@ -1,0 +1,49 @@
+#
+#  adc <adc_number> [channel]
+#
+
+axi=pcireg
+BASE_ADDR=0x5000
+  channel=
+      adc=
+
+fetch()
+{
+    local adc=$1
+    local channel=$2
+    local address=$(($BASE_ADDR + $adc*32 + $channel*4))
+    $axi -dec $address
+}
+
+adc=$1; shift
+if [ -z $adc ]; then
+    echo "Missing ADC number"
+    exit 1
+fi
+
+if [ $adc -lt 0 ] || [ $adc -gt 3 ]; then
+    echo "ADC must be between 0 and 3"
+    exit 1
+fi
+
+channel=$1; shift
+if [ ! -z $channel ]; then
+
+    if [ $channel -lt 0 ] || [ $channel -gt 7 ]; then
+        echo "Channel must be between 0 and 7"
+        exit 1
+    fi
+fi
+
+
+if [ -z $channel ]; then
+    for channel in {0..7}; do
+        value=$(fetch $adc $channel)
+        printf "%d: 0x%04X\n" $channel $value
+    done
+else
+    value=$(fetch $adc $channel)
+    printf "0x%04X\n" $value
+fi
+
+

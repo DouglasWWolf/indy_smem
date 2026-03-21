@@ -1,0 +1,68 @@
+tb_root=~/fpga
+
+update=0 
+if [ "$1" == "-update" ]; then
+    update=1
+    shift
+fi 
+
+comp()
+{
+    local_path=$1
+    tb_folder=$2
+    tb_path=$tb_folder/$(basename $local_path)
+
+    if [ ! -f $local_path ]; then
+        echo "NOT FOUND: $local_path"
+        return
+    fi
+
+    if [ ! -f $tb_path ]; then
+        echo "NOT FOUND: $tb_path"
+        return
+    fi
+
+    diff $local_path $tb_path >/dev/null
+
+    if [ $? -ne 0 ]; then
+        echo "$local_path <> $tb_path"
+        if [ $update -eq 1 ]; then
+            echo -n "Copy it? (y/n) " 
+            read answer
+            if [ $answer == "y" ] || [ $answer == "Y" ]; then
+                cp $tb_path $local_path
+            fi
+        fi 
+    fi
+}
+
+
+src=$tb_root/tb_smem/bdc/src
+comp abm_and_smem_ctl.v  $src
+comp chip_if_cdc.v       $src
+
+src=$tb_root/tb_smem/bdc/src/chip_spi
+
+comp chip_spi/chip_spi_mux.v $src
+comp chip_spi/chip_spi.v     $src
+comp chip_spi/chip_spi_if.v  $src
+
+src=$tb_root/tb_smem/bdc/src/smem_writer
+
+comp smem_writer/fetch_abm.v          $src
+comp smem_writer/smem_writer_hsi.v    $src
+comp smem_writer/smem_writer_hsi_s1.v $src
+comp smem_writer/smem_writer_hsi_s2.v $src
+comp smem_writer/smem_writer_spi.v    $src
+
+src=$tb_root/tb_smem/bdc/src/clock_mgr
+
+comp clock_mgr/clock_mgr.v          $src
+comp clock_mgr/clock_mgr_ctl.v      $src
+comp clock_mgr/clock_mgr_freq_ctr.v $src
+
+
+src=$tb_root/tb_smem/bdc/src/common
+
+diff common/strobe_cdc.v    $src
+diff common/idle_busy_cdc.v $src
