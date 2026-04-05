@@ -90,6 +90,7 @@ module abm_and_smem_ctl # (parameter AW=8)
 /*
     @register Copy an ABM from host-RAM into one or both ABM buffers
     @rname    REG_LOAD_ABM_VIA_PCI
+    @rtype    wo
     @field load_0 1 0 WO n/a Copy ABM from host RAM to ABM buffer #0
     @field load_1 1 1 WO n/a Copy ABM from host RAM to ABM buffer #0    
 */
@@ -146,20 +147,20 @@ localparam REG_CHIPIO_DATA_INCR =  7;
 
 /*
     @register Non-zero = SMEM is being updated
-    @rdesc    Read-only    
+    @rtype ro
 */
 localparam REG_SMEM_BUSY      =  9;
 
 
 /*
     @register The count of rows updated during the last SMEM update
-    @rdesc    Read-only
+    @rtype ro
 */
 localparam REG_SMEM_ROWS_UPD  = 10;
 
 /*
     @register The count of 32-bit words updated during the last SMEM update
-    @rdesc    Read-only    
+    @rtype ro
 */
 localparam REG_SMEM_WORDS_UPD = 11;
 
